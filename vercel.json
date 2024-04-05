@@ -4,7 +4,10 @@
         {
             "src": "./index.py",
             "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb" }
+            "config": { 
+                "maxLambdaSize": "15mb",
+                "runtime": "python3.9"  // Specify Python version here
+            }
         }
     ],
     "routes": [
@@ -12,8 +15,5 @@
             "src": "/(.*)",
             "dest": "/"
         }
-    ],
-    "env": {
-        "runtime": "python3.9"
-    }
+    ]
 }
